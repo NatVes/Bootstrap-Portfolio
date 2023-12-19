@@ -1,0 +1,148 @@
+:root {
+    --dark: #595E48;
+    --light: #D6D0D2;
+    --medium: #ACA8A2;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* setting bg color for the top navigation bar */
+#navigation {
+    background-color: var(--dark);
+}
+/* setting bg color for the bottom navigation bar */
+footer {
+    background-color: var(--medium);
+}
+/* decorating logo in the top navigation bar */
+#logo span {    
+    color: var(--dark);
+    background-color: var(--light);
+    line-height: normal;   
+} 
+/* setting letters color for the links in the top navigation bar */
+nav ul a:not(.btn) {
+    color: var(--light) !important;    
+}
+/* setting hover effect for the links in the top navigation bar */
+#top-nav a:not(.btn):hover {   
+    color: var(--medium) !important;
+    transition: 0.3s ease;
+}
+/* decorating btn in the top navigation bar */
+.custom-btn {
+    color: var(--dark);
+    background-color: var(--light);    
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+/* setting hover effect for the btn in the top and bottom navigation bar */
+.custom-btn:hover {
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;    
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background-color: var(--dark);
+    color: var(--light);
+}
+/* setting bg image for the hero section */
+.hero-banner {
+    background-image: url(../images/pretty-twig-white.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+/* decorating personal photo in the hero section */
+.hero-banner img {
+    border: 4px solid var(--dark);
+    margin-bottom: 1rem;
+}
+/* decorating name spelling in the hero section */
+.hero-banner h2 {
+    color: var(--light);
+    background-color: var(--dark);
+    padding: 5px 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+/* setting letters color for main content */
+.page-section {
+    color: var(--dark);
+}
+/* decorating titles in the main sections */
+.page-section h2 {
+    border-bottom: 4px solid var(--dark);
+    flex: auto;
+}
+/* decorating cards in the work section */
+.work-card {
+    outline: 5px solid var(--medium);
+}
+/* decorating cards names in the work section */
+.card-name {
+    color: var(--dark);
+    background-color: var(--medium);
+    position: absolute;
+    bottom: 15px;
+    border-radius: 0px 8px 8px 0px;
+}
+/* setting properties for overlay effect for cards */
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/* setting hover effect for cards */
+.work-card:hover {
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+/* setting overlay hover effect for cards */
+.work-card:hover .overlay {
+    opacity: 1;
+}
+/* setting properties for links and icons in the contact section */
+#contact a, #contact i {
+    color: var(--dark);
+    transition: opacity 0.3s ease;
+}
+/* setting hover effect for links in the contact section */
+#contact a:hover {
+    opacity: 0.5;
+}  
+/* setting size for icons in the contact section */
+#contact i {
+    scale: 1.2;
+}
+/* disabling phone number link */
+#phone-disable {
+    pointer-events: none;
+}
+/* setting hover effect for the links in the bottom navigation bar */
+#bottom-nav a:not(.btn):hover {   
+    color: var(--dark) !important;
+    transition: 0.3s ease;
+}
+
+@media screen and (min-width: 992px) {
+    .page-section h2 {
+        border-bottom: none;
+        border-right: 4px solid var(--dark);
+    }       
+}
+@media screen and (max-width: 992px) {
+    #logo {
+        background-color: var(--light);
+    } 
+}
